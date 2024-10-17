@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const useMenu = () => {
     const [menu, setMenu] = useState([]);
@@ -6,7 +6,7 @@ const useMenu = () => {
     // console.log(menu)
 
     useEffect(() => {
-        fetch('menu.json')
+        fetch('/menu.json')
             .then(res => res.json())
             .then(data => {
                 setMenu(data)
