@@ -7,6 +7,7 @@ import { useParams } from 'react-router-dom';
 import Cover from '../../Components/Cover/Cover';
 import OrderTap from './OrderTab/OrderTab';
 import useMenu from '../../hooks/useMenu';
+import { Helmet } from 'react-helmet-async';
 
 
 const Order = () => {
@@ -31,6 +32,9 @@ const Order = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Bistro Boss | Order Food</title>
+            </Helmet>
             <Cover img={orderCover} title='Order Food' />
 
             <Tabs defaultIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
